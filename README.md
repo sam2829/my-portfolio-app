@@ -44,7 +44,7 @@ The technologies model was created so I can create new technologies Ive learnt o
 
 An entity relationship diagram was created using drawSQL to show the schemas for each of the models and how they are related:
 
-![ERD Screenshot](/my_portfolio/docs/readme_screenshots/drawsql.png)
+![ERD Screenshot](/docs/readme_screenshots/drawsql.png)
 
 ## API Endpoints
 
