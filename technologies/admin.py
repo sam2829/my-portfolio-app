@@ -10,5 +10,6 @@ class TechnologyAdmin(admin.ModelAdmin):
     search_fields = ['name']
     list_filter = ['name']
 
+
 # Register the Technology model with the Technology Admin configuration
 admin.site.register(Technology, TechnologyAdmin)

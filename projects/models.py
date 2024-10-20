@@ -18,7 +18,7 @@ def validate_image(file):
         extension = os.path.splitext(file.name)[-1].lower().replace('.', '')
     # Ensure the file is an image
     valid_extensions = ['jpg', 'jpeg', 'png', 'gif']
-   
+
     if extension not in valid_extensions:
         raise ValidationError(
             f"Unsupported file extension. Allowed extensions are "

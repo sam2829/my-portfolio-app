@@ -49,16 +49,55 @@ Full test table:
 
 ## Automated Testing
 
-In this project I also done automated python testing. In this I tried to test as much on the apps as I could. These tests were created to test the functionality of the apps. These can be found in the test.py files in the respective apps.
+In this project I also done automated python testing. In this I done some basic testing on the apps, but in future look to carry out more thorough automated testing. These tests were created to test the functionality of the apps. These can be found in the test.py files in the respective apps.
 
 ***projects***
 
-![Automated Testing Projects](/docs/)
-
-***technologies***
-
-![Automated Testing Technologies](/docs/)
+![Automated Testing Projects](/docs/testing_backend_screenshots/testing-projects.png)
 
 ***Emailapp***
 
-![Automated Testing Emailapp](/docs/)
+![Automated Testing Emailapp](/docs/testing_backend_screenshots/testing-emailapp.png)
+
+## Validators
+
+***CI Python Linter***
+
+The CI Python Linter was used to validate the python code used throughout the project. All results are in the table below:
+
+
+| Files | Expected Result | Result | Pass / Fail |
+| --- | --- | --- | --- |
+|`my_portfolio`|
+| asgi.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| settings.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | ...| 
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| wsgi.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+|`projects`|
+| admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| filters.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| serializers.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+|`emailapp`|
+| admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| forms.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+|`technologies`|
+| admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |  
+| models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| serializers.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass | 
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+
+[back to top](#sam-scarisbrick-portfolio-api-testing)

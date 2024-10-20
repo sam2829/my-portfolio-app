@@ -9,9 +9,10 @@ class ProjectAdminForm(forms.ModelForm):
         model = Project
         fields = '__all__'
         widgets = {
-            'technologies': FilteredSelectMultiple("Technologies", is_stacked=False),
+            'technologies': FilteredSelectMultiple(
+                "Technologies", is_stacked=False
+                ),
         }
-
 
 
 class ProjectAdmin(admin.ModelAdmin):

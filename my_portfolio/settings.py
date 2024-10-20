@@ -37,8 +37,6 @@ if 'DEV' not in os.environ:
         'rest_framework.renderers.JSONRenderer',
     ]
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -48,7 +46,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'sam-scarisbrick-13b7fd9648a6.herokuapp.com']
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1', 'sam-scarisbrick-13b7fd9648a6.herokuapp.com'
+    ]
 
 
 # Application definition
