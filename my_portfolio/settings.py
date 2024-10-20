@@ -44,7 +44,7 @@ if 'DEV' not in os.environ:
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOST', '').split(',') + ['localhost', '127.0.0.1']
 
@@ -82,14 +82,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
-    ]
-else:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https://.*\.gitpod\.io$",
-    ]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    os.environ.get('CLIENT_ORIGIN'),
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    os.environ.get('CLIENT_ORIGIN'),
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
