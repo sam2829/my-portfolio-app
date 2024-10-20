@@ -54,7 +54,7 @@ An entity relationship diagram was created using drawSQL to show the schemas for
 | /api/projects | GET | List all profiles | LIST |
 | /api/projects/<int:pk> | GET | Get an individual project by id | DETAIL |
 | `Email Endpoints` |
-| /api/send-email/ | Ability for user to post email | POST |
+| /api/send-email/ | POST | Ability for user to post email | POST |
 
 [back to top](#sam-scarisbrick-portfolio)
 
