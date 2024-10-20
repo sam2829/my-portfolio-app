@@ -101,3 +101,12 @@ The CI Python Linter was used to validate the python code used throughout the pr
 | views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 
 [back to top](#sam-scarisbrick-portfolio-api-testing)
+
+## Bugs and Fixes
+
+| Bugs | Issue | Resolution |
+| --- | --- | --- |
+| Cloudinary full URL for image in project. | When retrieving the data for a project, the image field was populated but it didn't have the full URL for the image in Cloudinary. | To solve this, I used serializers in the serializers.py file and called a function which made sure the full URL was retrieved. |
+| Porject technologies were listed by id. | When retrieveing the data for a project, the technologies used were listed in seperate objects containing the id number for that technology. | To resolve this, I used serializers in the serializers.py file and called a function which would then return a list of each technology but this time listing them by the name field. |
+
+[back to top](#sam-scarisbrick-portfolio-api-testing)
