@@ -1,16 +1,18 @@
-import './App.css';
-import styles from "./App.module.css"
-import Button from "react-bootstrap/Button";
+import {
+  BrowserRouter as Router,
+  // Routes,
+  // Route,
+  // useLocation,
+} from "react-router-dom";
+import styles from "./App.module.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className={styles.App}>
-      <div>
-        <p>
-          This is my app
-        </p>
-      </div>
-      <Button variant="primary">Primary</Button>
+      <Router>
+        <NavBar />
+      </Router>
     </div>
   );
 }
