@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import styles from "../styles/NavBar.module.css";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import NavBarNavLink from "./NavBarNavLink";
+import myImage from "../images/my-image.jpg";
 
 // Component for rendering Navbar
 const NavBar = () => {
@@ -22,12 +23,16 @@ const NavBar = () => {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand className={`px-5 ${styles.Logo}`}>
+          <Navbar.Brand className={`px-4 ${styles.Logo}`}>
             <Link to="/" className={styles.Link}>
-              <i className="fa-solid fa-hammer pe-3"></i>
+              <img
+                className={styles.Image}
+                src={myImage}
+                alt="Sam Scarisbrick"
+              />
               <div className={styles.textContainer}>
                 <span className={styles.name}>Sam</span>
-                <span className={styles.profession}>Scarisbrick</span>
+                <span className={styles.name}>Scarisbrick</span>
               </div>
             </Link>
           </Navbar.Brand>
@@ -36,7 +41,8 @@ const NavBar = () => {
             onClick={() => setExpanded(!expanded)}
             aria-controls="responsive-navbar-nav"
             className={styles.MenuIcon}
-          />
+          >
+          </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className={`ms-auto ${styles.navLinks}`}>
               {/** Nav Links in Navbar */}
