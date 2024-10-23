@@ -1,0 +1,11 @@
+.Icon i {
+  font-size: 25px;
+  color: #1e90ff;
+  transition: color 0.8s ease, transform 0.8s ease;
+  transform: scale(1);
+}
+
+.Icon i:hover {
+  color: #333333;
+  transform: scale(1.2);
+}
