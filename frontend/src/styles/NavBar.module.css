@@ -1,10 +1,12 @@
 .NavBar {
     background-color: #1e90ff;
     color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 38px;
+    padding-bottom: 38px;
     display: flex;
     align-items: center;
+    min-height: 136px;
+    border-radius: 5px;
 }
 
 .navLinks {
@@ -41,7 +43,7 @@
 }
 
 .name {
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 .MenuIcon {
@@ -54,3 +56,32 @@
     
 }
 
+/* Styles for screen sizes larger than 768px wide */
+@media (min-width: 768px) {
+    .NavBar {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .Image {
+        height: 60px;
+        width: 60px;
+    }
+
+    .name {
+        font-size: 22px; 
+    }
+
+    .MenuIcon {
+        font-size: 22px;
+    }
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+    .navLinks {
+        justify-content: flex-end !important;
+        align-items: center;
+        padding-top: 0;
+    }
+}

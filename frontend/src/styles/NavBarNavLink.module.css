@@ -1,6 +1,37 @@
 .navLink {
     color: #ffffff;
     text-decoration: none;
-    padding: 5px;
+    padding: 10px 5px;
     font-size: 18px;
+    position: relative;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.navLink:hover::after,
+.navLink.Active::after {
+    width: 100%;
+}
+
+/* Styles for screen sizes larger than 768px wide */
+@media (min-width: 768px) {
+    .navLink {
+        font-size: 20px;
+    }
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+    .navLink {
+        margin-left: 60px;
+    }
 }
