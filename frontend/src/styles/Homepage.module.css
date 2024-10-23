@@ -16,6 +16,7 @@
   border: 1px solid #87cefa;
   border-radius: 10px;
   margin: 20px 0 20px 0;
+  object-fit: cover;
 }
 
 .Text {
@@ -23,4 +24,21 @@
   color: #333333;
   margin: 20px 0 20px 0;
   font-weight: 700;
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .Heading {
+    font-size: 35px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  
+  .Image {
+    width: 300px;
+    height: 350px;  }
+
+  .Text {
+    font-size: 18px;
+  }
 }

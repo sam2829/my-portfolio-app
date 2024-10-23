@@ -9,3 +9,10 @@
   color: #333333;
   transform: scale(1.2);
 }
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .Icon i {
+    font-size: 35px;
+  }
+}

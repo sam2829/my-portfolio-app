@@ -14,11 +14,11 @@ const Homepage = () => {
         <Row>
           <h1 className={styles.Heading}>Sam Scarisbrick</h1>
         </Row>
-        <Row>
-          <Col xs={12}>
+        <Row className="justify-content-center">
+          <Col xs={12} lg={5} className="mx-auto">
             <img src={myImage} alt="Sam Scarisbrick" className={styles.Image} />
           </Col>
-          <Col xs={12}>
+          <Col xs={12} lg={5} className="d-flex align-items-center mx-auto">
             <div>
               <p className={styles.Text}>
                 Hi I'm Sam Scarisbrick, a keen junior software developer
@@ -31,12 +31,12 @@ const Homepage = () => {
           </Col>
         </Row>
         <Row>
-          <div className="my-4">
+          <div className="my-5">
             <CustomButton text="View My Portfolio" />
           </div>
         </Row>
         <Row className="justify-content-center my-4">
-          <Col className={iconStyles.Icon}>
+          <Col className={iconStyles.Icon} xs={2}>
             <a
               href="https://www.linkedin.com/in/samuel-scarisbrick/ "
               target="_blank"
@@ -45,7 +45,7 @@ const Homepage = () => {
               <i className="fa-brands fa-linkedin"></i>
             </a>
           </Col>
-          <Col className={iconStyles.Icon}>
+          <Col className={iconStyles.Icon} xs={2}>
             <a
               href="https://github.com/sam2829"
               target="_blank"
@@ -54,7 +54,7 @@ const Homepage = () => {
               <i className="fa-brands fa-github"></i>
             </a>
           </Col>
-          <Col className={iconStyles.Icon}>
+          <Col className={iconStyles.Icon} xs={2}>
             <a
               href="mailto: samscarisbrick@outlook.com"
               target="_blank"
