@@ -16,13 +16,16 @@ function App() {
   return (
     <div className={styles.App}>
       <Router>
+        {/* import navbar */}
         <NavBar />
         <Routes>
+          {/* import pages and their paths */}
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        {/* import footer */}
         <Footer />
       </Router>
     </div>

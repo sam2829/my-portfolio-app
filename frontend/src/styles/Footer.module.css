@@ -46,3 +46,19 @@
   color: #555555;
   font-size: 12px;
 }
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+    .TextLinkContainer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .TextLink {
+      flex: 1;
+      text-align: center;
+      align-items: center;
+      padding-top: 0;
+    }
+  }

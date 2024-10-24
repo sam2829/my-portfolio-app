@@ -3,10 +3,16 @@ import styles from "../styles/Icons.module.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Component to display the social icons
+// Component to display the social icons and styles differently
+// depending on whether the footer prop is present, which implies
+// the icons are displayed in the footer
 const Icons = ({ footer }) => {
   return (
-    <Row className="justify-content-center my-4">
+    <Row
+      className={`${styles.IconsContainer} ${
+        footer ? styles.FooterIconsContainer : ""
+      } justify-content-center`}
+    >
       <Col
         className={`${styles.Icon} ${footer ? styles.FooterIcon : ""}`}
         xs={2}
