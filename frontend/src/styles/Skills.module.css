@@ -1,0 +1,15 @@
+.SkillsList {
+    padding: 0;
+    text-align: left;
+}
+
+.ListItems {
+    list-style-type: none;
+    font-size: 14px;
+    color: white;
+    background-color: #1e90ff;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
