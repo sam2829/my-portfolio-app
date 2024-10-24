@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../../styles/Homepage.module.css";
-import iconStyles from '../../styles/Icons.module.css'
 import myImage from "../../images/my-image.jpg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CustomButton from "../../components/CustomButton";
+import Icons from "../../components/Icons";
 
+//  Function to display homepage
 const Homepage = () => {
   return (
     <Container className={styles.Main}>
@@ -16,6 +18,7 @@ const Homepage = () => {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} lg={5} className="mx-auto">
+            {/* Display image of myself */}
             <img src={myImage} alt="Sam Scarisbrick" className={styles.Image} />
           </Col>
           <Col xs={12} lg={5} className="d-flex align-items-center mx-auto">
@@ -32,37 +35,15 @@ const Homepage = () => {
         </Row>
         <Row>
           <div className="my-5">
-            <CustomButton text="View My Portfolio" />
+            {/* Import component for the custom button which links to portfolio page */}
+            <Link to="/portfolio">
+              <CustomButton text="View My Portfolio" />
+            </Link>
           </div>
         </Row>
         <Row className="justify-content-center my-4">
-          <Col className={iconStyles.Icon} xs={2}>
-            <a
-              href="https://www.linkedin.com/in/samuel-scarisbrick/ "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-          </Col>
-          <Col className={iconStyles.Icon} xs={2}>
-            <a
-              href="https://github.com/sam2829"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </Col>
-          <Col className={iconStyles.Icon} xs={2}>
-            <a
-              href="mailto: samscarisbrick@outlook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-solid fa-envelope"></i>
-            </a>
-          </Col>
+          {/* Import Icons component */}
+          <Icons />
         </Row>
       </main>
     </Container>
