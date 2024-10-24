@@ -1,11 +1,18 @@
-import React from 'react'
-import Button from "react-bootstrap/Button";
-import styles from '../styles/CustomButton.module.css'
+import React from "react";
+import { motion } from "framer-motion";
+import styles from "../styles/CustomButton.module.css";
 
-const CustomButton = ({text}) => {
+const CustomButton = ({ text }) => {
   return (
-    <Button className={styles.Button}>{text}</Button>
-  )
-}
+    // use motion framer to animate custom button
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 100 }}
+      className={styles.Button}
+    >
+      {text}
+    </motion.button>
+  );
+};
 
-export default CustomButton
+export default CustomButton;

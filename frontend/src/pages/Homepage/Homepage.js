@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "../../styles/Homepage.module.css";
 import myImage from "../../images/my-image.jpg";
 import Container from "react-bootstrap/Container";
@@ -18,18 +19,31 @@ const Homepage = () => {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} lg={5} className="mx-auto">
-            {/* Display image of myself */}
-            <img src={myImage} alt="Sam Scarisbrick" className={styles.Image} />
+            {/* Display image of myself, using motion-framer */}
+            <motion.img
+              initial={{ opacity: 0, x: -300 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2, delay: 2 }}
+              src={myImage}
+              alt="Sam Scarisbrick"
+              className={styles.Image}
+            />
           </Col>
           <Col xs={12} lg={5} className="d-flex align-items-center mx-auto">
             <div>
-              <p className={styles.Text}>
+              {/* using motion framer to display paragraph */}
+              <motion.p
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2, delay: 2 }}
+                className={styles.Text}
+              >
                 Hi I'm Sam Scarisbrick, a keen junior software developer
                 passionate about creating engaging and responsive web
                 applications. I thrive on challenges and enjoy learning new
                 technologies to enhance my skill set and deliver innovative
                 solutions.
-              </p>
+              </motion.p>
             </div>
           </Col>
         </Row>
