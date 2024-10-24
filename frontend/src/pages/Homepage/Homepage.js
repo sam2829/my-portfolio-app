@@ -41,10 +41,8 @@ const Homepage = () => {
             </Link>
           </div>
         </Row>
-        <Row className="justify-content-center my-4">
-          {/* Import Icons component */}
-          <Icons />
-        </Row>
+        {/* Import Icons component */}
+        <Icons />
       </main>
     </Container>
   );

@@ -1,0 +1,48 @@
+.Footer {
+  background-color: #d0d0d0;
+  color: #555555;
+  padding: 20px 5px;
+  text-align: center;
+}
+
+.Heading {
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.TextLink {
+  color: #555555;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.TextLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #555555;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.TextLink:hover::after {
+  width: 100%;
+}
+
+.FooterLine {
+  border: none;
+  border-top: 3px solid white;
+  width: 90%;
+  margin: 20px 0;
+}
+
+.Text {
+  color: #555555;
+  font-size: 12px;
+}

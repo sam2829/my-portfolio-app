@@ -16,3 +16,17 @@
     font-size: 35px;
   }
 }
+
+
+/* Styles for the footer icons */
+
+.FooterIcon i {
+  font-size: 22px;
+  color: #666666;
+  transition: transform 0.8s ease;
+  transform: scale(1);
+}
+
+.FooterIcon i:hover {
+  transform: scale(1.2);
+}
