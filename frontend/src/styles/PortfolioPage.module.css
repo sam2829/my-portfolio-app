@@ -1,3 +1,18 @@
 .Main {
   margin-top: 136px;
+  color: #333333;
+  padding-bottom: 60px;
+}
+
+.Heading {
+  font-size: 30px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
+.Text {
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+  font-weight: 700;
 }
