@@ -1,0 +1,58 @@
+.DropdownButton {
+    background-color: #1e90ff;
+    width: 200px;
+    margin: 20px 0 20px 0;
+    padding: 8px 20px;
+    transition: transform 0.8s ease;
+    text-align: left; 
+    position: relative;
+    padding-right: 30px; 
+}
+  
+.DropdownButton::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: white;
+    pointer-events: none;
+}
+  
+.DropdownButton,
+.DropdownButton:hover,
+.DropdownButton:focus,
+.DropdownButton:active,
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.show > .dropdown-toggle {
+    background-color: #1e90ff !important;
+}
+  
+.DropdownMenu {
+    background-color: #1e90ff !important;
+    width: 200px !important;
+}
+  
+.DropdownItem {
+    color: white !important;
+}
+  
+.DropdownItem:hover {
+    background-color: #f4f4f4 !important;
+    color: #333333 !important;
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+    .DropdownButton {
+        width: 400px;
+    }
+    
+    .DropdownMenu {
+        width: 400px !important;
+    }
+}

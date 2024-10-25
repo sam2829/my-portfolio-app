@@ -3,7 +3,8 @@ import styles from "../../styles/PortfolioPage.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "../../components/DropdownButton";
+
 // dummy data for projects model
 const DUMMYPROJECTS = [
   {
@@ -119,32 +120,22 @@ const PortfolioPage = () => {
         <Row>
           <h1 className={styles.Heading}>Portfolio</h1>
         </Row>
-        <Row>
+        <Row className="justify-content-center">
+          <Col xs={12} md={8}>
           <p className={styles.Text}>
             Welcome to my portfolio! Here you'll find a slection of projects
             that demonstrate my skills in web development. I'm passionate about
             creating functional ans aesthetically pleasing applications.
           </p>
+          </Col>
         </Row>
         <Row>
-          {/* import dropdown selector to filter projects by technologies */}
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              {selectedTechnology}
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              {/* map over the technologies to select from */}
-              {uniqueTechs.map((tech, index) => (
-                <Dropdown.Item
-                  key={index}
-                  onClick={() => setSelectedTechnology(tech)}
-                >
-                  {tech}
-                </Dropdown.Item>
-              ))}
-            </Dropdown.Menu>
-          </Dropdown>
+          {/* import dropdown Button */}
+          <DropdownButton
+            uniqueTechs={uniqueTechs}
+            selectedTechnology={selectedTechnology}
+            setSelectedTechnology={setSelectedTechnology}
+          />
         </Row>
         {/* dummy run to display projects */}
         <div className={styles.ProjectList}>

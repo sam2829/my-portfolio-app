@@ -16,3 +16,16 @@
   margin: 20px 0 20px 0;
   font-weight: 700;
 }
+
+
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .Heading {
+    font-size: 35px;
+  }
+
+  .Text {
+    font-size: 18px;
+  }
+}
