@@ -122,11 +122,11 @@ const PortfolioPage = () => {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={8}>
-          <p className={styles.Text}>
-            Welcome to my portfolio! Here you'll find a slection of projects
-            that demonstrate my skills in web development. I'm passionate about
-            creating functional ans aesthetically pleasing applications.
-          </p>
+            <p className={styles.Text}>
+              Welcome to my portfolio! Here you'll find a slection of projects
+              that demonstrate my skills in web development. I'm passionate
+              about creating functional ans aesthetically pleasing applications.
+            </p>
           </Col>
         </Row>
         <Row>
@@ -138,20 +138,42 @@ const PortfolioPage = () => {
           />
         </Row>
         {/* dummy run to display projects */}
-        <div className={styles.ProjectList}>
+        <Row className={`${styles.ProjectList} justify-content-center`}>
           {filteredProjects.map((project) => (
-            <div key={project.id} className={styles.ProjectItem}>
-              <h3>{project.title}</h3>
-              <ul>
-                Technologies Used:
-                {/* map over technologies array */}
-                {project.technologies.map((tech, index) => (
-                  <li key={index}>{tech}</li>
-                ))}
-              </ul>
-            </div>
+            <Col key={project.id} xs={12} md={6} lg={4}>
+              <div className={styles.ProjectItem}>
+                <Row>
+                  <Col xs={12}>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className={styles.Image}
+                    />
+                  </Col>
+                  <Col xs={12}>
+                    <h6 className={styles.ProjectSubHeading}>
+                      {project.title}
+                    </h6>
+                    <p className={styles.ProjectSummary}>{project.summary}</p>
+                  </Col>
+                </Row>
+                <Row>
+                  <h6 className={styles.ProjectSubHeading}>
+                    Technologies Used:
+                  </h6>
+                  <ul className={styles.TechUsedList}>
+                    {/* map over technologies array */}
+                    {project.technologies.map((tech, index) => (
+                      <li key={index} className={styles.TechUsedItems}>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </Row>
+              </div>
+            </Col>
           ))}
-        </div>
+        </Row>
       </main>
     </Container>
   );
