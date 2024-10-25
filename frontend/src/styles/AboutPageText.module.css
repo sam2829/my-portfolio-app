@@ -1,0 +1,13 @@
+.Text {
+  font-size: 14px;
+  color: #333333;
+  margin: 20px 0 20px 0;
+  font-weight: 700;
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .Text {
+    font-size: 18px;
+  }
+}

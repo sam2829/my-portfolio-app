@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Skills from "../../components/Skills";
+import AboutPageText from "./AboutPageText";
 
 const AboutPage = () => {
   return (
@@ -12,35 +13,37 @@ const AboutPage = () => {
         <Row>
           <h1 className={styles.Heading}>Sam Scarisbrick</h1>
         </Row>
+        {/* Row for subheadings */}
         <Row className="justify-content-center">
           <Col xs={12} lg={5} className="mx-auto">
             <h3 className={styles.SubHeading}>About Me</h3>
-            <p className={styles.Text}>
-              I’m a passionate junior software developer with a strong
-              enthusiasm for learning and building innovative web solutions.
-              I’ve developed skills in HTML, CSS, JavaScript, Python, React,
-              Django, and more.
-            </p>
-            <p className={styles.Text}>
-              After earning a Full Stack Software Development Diploma through
-              the Code Institute, I built my portfolio and recently started
-              working on projects for local businesses, applying my knowledge to
-              solve real-world problems and deliver user-friendly solutions.
-            </p>
-            <p className={styles.Text}>
-              I’m eager for job opportunities where I can contribute, learn, and
-              grow within a dynamic team. Feel free to connect with me on
-              LinkedIn or explore my work on the Portfolio page. For any
-              inquiries, don’t hesitate to reach out through the contact details
-              available on my Contact page.
-            </p>
           </Col>
           <Col xs={12} lg={5} className="mx-auto">
-          <h3 className={styles.SubHeading}>My Skills</h3>
+            <h3 className={`${styles.SubHeading} d-none d-lg-block`}>
+              My Skills
+            </h3>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          {/* column for about me text */}
+          <Col xs={12} lg={5} className={`${styles.TextColumn} mx-auto`}>
+          {/* Import About me page text */}
+            <AboutPageText />
+          </Col>
+          <Col xs={12} lg={5} className="mx-auto">
+            {/* column for listing my skils */}
+            <h3 className={`${styles.SubHeading} d-block d-lg-none`}>
+              My Skills
+            </h3>
             <h6 className={styles.SkillsHeading}>Frontend:</h6>
-            <Skills />
+            {/* importint list of skills depending on prop passed */}
+            <Skills skills="frontendSkills" />
             <h6 className={styles.SkillsHeading}>Backend:</h6>
+            {/* importint list of skills depending on prop passed */}
+            <Skills skills="backendSkills" />
             <h6 className={styles.SkillsHeading}>Tools:</h6>
+            {/* importint list of skills depending on prop passed */}
+            <Skills skills="toolsSkills" />
           </Col>
         </Row>
       </main>
