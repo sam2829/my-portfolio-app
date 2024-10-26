@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DropdownButton from "../../components/DropdownButton";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 // dummy data for projects model
 const DUMMYPROJECTS = [
@@ -11,7 +12,7 @@ const DUMMYPROJECTS = [
     id: 1,
     image:
       "http://res.cloudinary.com/dc8vjzinx/image/upload/v1729409978/sef679uid011dfcawbpq.jpg",
-    technologies: ["HTML", "JavaScript"],
+    technologies: ["HTML", "JavaScript", "Python", "Django", "Django Rest", "React.JS"],
     title: "title1 ipsum dolor sit amet, consectetuer adipiscin",
     summary:
       "test 1 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
@@ -28,7 +29,7 @@ const DUMMYPROJECTS = [
     technologies: ["HTML"],
     title: "title2 ipsum dolor sit amet, consectetuer adipiscin",
     summary:
-      "test 2 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
+      "test 2  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
     overview:
       "test 2 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu",
     github: "www.github.com",
@@ -73,7 +74,7 @@ const DUMMYPROJECTS = [
       "test 5 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
     overview:
       "test5 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu",
-    github: "www.github.com",
+    github: "http://www.skysports.com",
     live_site: "http://www.tomcostincarpentry.co.uk",
     created_at: "25 Oct 2024",
   },
@@ -95,6 +96,22 @@ const DUMMYTECHS = [
   {
     id: 4,
     name: "Python",
+  },
+  {
+    id: 5,
+    name: "Django",
+  },
+  {
+    id: 6,
+    name: "Django rest",
+  },
+  {
+    id: 7,
+    name: "Heroku",
+  },
+  {
+    id: 8,
+    name: "React.JS",
   },
 ];
 
@@ -169,6 +186,39 @@ const PortfolioPage = () => {
                       </li>
                     ))}
                   </ul>
+                </Row>
+                {/* Links for github and livesite */}
+                <Row className="justify-content-center mb-4 mt-3">
+                  <Col xs={3}>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip>View on GitHub</Tooltip>}
+                    >
+                      <a
+                        href={project.github}
+                        className={styles.Link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </OverlayTrigger>
+                  </Col>
+                  <Col xs={3}>
+                    <OverlayTrigger
+                      placement="top"
+                      overlay={<Tooltip>View on Live Site</Tooltip>}
+                    >
+                      <a
+                        href={project.live_site}
+                        className={styles.Link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fas fa-external-link-alt"></i>
+                      </a>
+                    </OverlayTrigger>
+                  </Col>
                 </Row>
               </div>
             </Col>
