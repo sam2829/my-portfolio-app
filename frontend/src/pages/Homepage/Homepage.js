@@ -23,7 +23,7 @@ const Homepage = () => {
             <motion.img
               initial={{ opacity: 0, x: -300 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2, delay: 2 }}
+              transition={{ duration: 2, delay: 1 }}
               src={myImage}
               alt="Sam Scarisbrick"
               className={styles.Image}
@@ -35,7 +35,7 @@ const Homepage = () => {
               <motion.p
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2, delay: 2 }}
+                transition={{ duration: 2, delay: 1 }}
                 className={styles.Text}
               >
                 Hi I'm Sam Scarisbrick, a keen junior software developer

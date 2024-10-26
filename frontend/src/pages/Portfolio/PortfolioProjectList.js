@@ -11,7 +11,10 @@ import PortfolioProjectIcons from "./PortfolioProjectIcons";
 const PortfolioProjectList = ({ filteredProjects }) => {
   return (
     <>
-      <Row className={`${styles.ProjectList} justify-content-center`}>
+      <Row
+        key={filteredProjects}
+        className={`${styles.ProjectList} justify-content-center`}
+      >
         {/* map over the filtered projects */}
         {filteredProjects.map((project, index) => (
           <Col key={project.id} xs={12} md={6} lg={4}>
@@ -20,7 +23,7 @@ const PortfolioProjectList = ({ filteredProjects }) => {
               initial={{ opacity: 0, scale: 0.8, x: -60 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{
-                delay: index * 1.5,
+                delay: index * 1,
                 type: "spring",
                 stiffness: 50,
               }}

@@ -6,14 +6,20 @@ import Col from "react-bootstrap/Col";
 import DropdownButton from "../../components/DropdownButton";
 import PortfolioProjectList from "./PortfolioProjectList";
 
-
 // dummy data for projects model
 const DUMMYPROJECTS = [
   {
     id: 1,
     image:
       "http://res.cloudinary.com/dc8vjzinx/image/upload/v1729409978/sef679uid011dfcawbpq.jpg",
-    technologies: ["HTML", "JavaScript", "Python", "Django", "Django Rest", "React.JS"],
+    technologies: [
+      "HTML",
+      "JavaScript",
+      "Python",
+      "Django",
+      "Django Rest",
+      "React.JS",
+    ],
     title: "title1 ipsum dolor sit amet, consectetuer adipiscin",
     summary:
       "test 1 ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
@@ -104,7 +110,7 @@ const DUMMYTECHS = [
   },
   {
     id: 6,
-    name: "Django rest",
+    name: "Django Rest",
   },
   {
     id: 7,
@@ -157,7 +163,10 @@ const PortfolioPage = () => {
         </Row>
         {/* dummy run to display projects */}
         {/* import portfolio projects */}
-        <PortfolioProjectList filteredProjects={filteredProjects} />
+        <PortfolioProjectList
+          key={selectedTechnology}
+          filteredProjects={filteredProjects}
+        />
       </main>
     </Container>
   );
