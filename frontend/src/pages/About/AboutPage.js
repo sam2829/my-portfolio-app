@@ -36,13 +36,13 @@ const AboutPage = () => {
               My Skills
             </h3>
             <h6 className={styles.SkillsHeading}>Frontend:</h6>
-            {/* importint list of skills depending on prop passed */}
+            {/* important list of skills depending on prop passed */}
             <Skills skills="frontendSkills" />
             <h6 className={styles.SkillsHeading}>Backend:</h6>
-            {/* importint list of skills depending on prop passed */}
+            {/* important list of skills depending on prop passed */}
             <Skills skills="backendSkills" />
             <h6 className={styles.SkillsHeading}>Tools:</h6>
-            {/* importint list of skills depending on prop passed */}
+            {/* important list of skills depending on prop passed */}
             <Skills skills="toolsSkills" />
           </Col>
         </Row>

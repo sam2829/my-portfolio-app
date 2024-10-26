@@ -11,6 +11,7 @@ import AboutPage from "./pages/About/AboutPage";
 import PortfolioPage from "./pages/Portfolio/PortfolioPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import Footer from "./components/Footer";
+import PortfolioDetailPage from "./pages/Portfolio/PortfolioDetailPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:id" element={<PortfolioDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         {/* import footer */}
