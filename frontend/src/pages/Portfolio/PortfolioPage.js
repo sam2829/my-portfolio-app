@@ -4,7 +4,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DropdownButton from "../../components/DropdownButton";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import PortfolioProjectList from "./PortfolioProjectList";
+
 
 // dummy data for projects model
 const DUMMYPROJECTS = [
@@ -155,75 +156,8 @@ const PortfolioPage = () => {
           />
         </Row>
         {/* dummy run to display projects */}
-        <Row className={`${styles.ProjectList} justify-content-center`}>
-          {filteredProjects.map((project) => (
-            <Col key={project.id} xs={12} md={6} lg={4}>
-              <div className={styles.ProjectItem}>
-                <Row>
-                  <Col xs={12}>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className={styles.Image}
-                    />
-                  </Col>
-                  <Col xs={12}>
-                    <h6 className={styles.ProjectSubHeading}>
-                      {project.title}
-                    </h6>
-                    <p className={styles.ProjectSummary}>{project.summary}</p>
-                  </Col>
-                </Row>
-                <Row>
-                  <h6 className={styles.ProjectSubHeading}>
-                    Technologies Used:
-                  </h6>
-                  <ul className={styles.TechUsedList}>
-                    {/* map over technologies array */}
-                    {project.technologies.map((tech, index) => (
-                      <li key={index} className={styles.TechUsedItems}>
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-                {/* Links for github and livesite */}
-                <Row className="justify-content-center mb-4 mt-3">
-                  <Col xs={3}>
-                    <OverlayTrigger
-                      placement="top"
-                      overlay={<Tooltip>View on GitHub</Tooltip>}
-                    >
-                      <a
-                        href={project.github}
-                        className={styles.Link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-brands fa-github"></i>
-                      </a>
-                    </OverlayTrigger>
-                  </Col>
-                  <Col xs={3}>
-                    <OverlayTrigger
-                      placement="top"
-                      overlay={<Tooltip>View on Live Site</Tooltip>}
-                    >
-                      <a
-                        href={project.live_site}
-                        className={styles.Link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fas fa-external-link-alt"></i>
-                      </a>
-                    </OverlayTrigger>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-          ))}
-        </Row>
+        {/* import portfolio projects */}
+        <PortfolioProjectList filteredProjects={filteredProjects} />
       </main>
     </Container>
   );
