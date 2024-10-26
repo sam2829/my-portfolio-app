@@ -33,7 +33,7 @@ const PortfolioDetailPage = () => {
       <main className={styles.Main}>
         <h1 className={styles.Heading}>{project.title}</h1>
         <Row className="justify-content-center">
-          <Col mx={12}>
+          <Col mx={12} lg={5}>
             {/* image on displayed in large screens */}
             <img
               src={project.image}
@@ -41,7 +41,7 @@ const PortfolioDetailPage = () => {
               className={`${styles.Image} d-none d-lg-block`}
             />
           </Col>
-          <Col xs={12}>
+          <Col xs={12}  lg={5}>
             <Row>
               <Col xs={12}>
                 <h6 className={styles.SubHeading}>Overview</h6>
@@ -62,8 +62,8 @@ const PortfolioDetailPage = () => {
             </Row>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12}>
+        <Row className="justify-content-center">
+          <Col xs={12} lg={5}>
             <div className="pt-5">
               {/* import custom button and change text */}
 
@@ -76,8 +76,8 @@ const PortfolioDetailPage = () => {
               </a>
             </div>
           </Col>
-          <Col xs={12}>
-            <div className="pt-3">
+          <Col xs={12} lg={5}>
+            <div className="pt-5">
               {/* import custom button and change text */}
               <Link to="/portfolio">
                 <CustomButton text="Go Back" />

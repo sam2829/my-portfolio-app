@@ -13,10 +13,11 @@
 
 .Image {
     width: 100%;
-    height: 250px;
+    height: 300px;
     border-radius: 5px;
     object-fit: cover;
     margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .SubHeading {
@@ -38,5 +39,9 @@
 
     .Text {
       font-size: 16px;
+    }
+
+    .Image {
+        height: 100%;
     }
   }
