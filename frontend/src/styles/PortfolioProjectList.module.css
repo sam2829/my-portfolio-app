@@ -27,7 +27,7 @@
   }
   
   .ProjectSummary {
-    font-size: 16px;
+    font-size: 14px;
     padding: 15px 16px;
     /* min-height: 200px; */
   }
@@ -40,3 +40,13 @@
   .ProjectLink:hover {
     color: #1e90ff;
   }
+
+  /* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .ProjectSummary {
+    font-size: 16px;
+  }
+  .ProjectSubHeading {
+    font-size: 18px;
+  }
+}
