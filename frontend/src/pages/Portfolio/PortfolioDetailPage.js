@@ -16,7 +16,26 @@ const PortfolioDetailPage = () => {
   const [project, setProject] = useState(null);
 
   // define if app is in small screen
-  // const isSmallScreen = window.innerWidth <= 991;
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 991);
+  // const [delays, setDelays] = useState({
+  //   techDelay: isSmallScreen ? 5 : 1,
+  // });
+
+  // Variables for motion framer
+  const techDelay = isSmallScreen ? 5 : 1;
+  const imageInitial = { opacity: 0, x: -300 };
+  const imageAnimate = { opacity: 1, x: 0 };
+
+  // useEffect to detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      const smallScreen = window.innerWidth <= 991;
+      setIsSmallScreen(smallScreen);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //   useEffect hook to eventually fetch data
   useEffect(() => {
@@ -39,16 +58,14 @@ const PortfolioDetailPage = () => {
         <Row className="justify-content-center">
           <Col mx={12} lg={5}>
             {/* image on displayed in large screens */}
-            {/* {isSmallScreen && ( */}
             <motion.img
-              initial={{ opacity: 0, x: -300 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={imageInitial}
+              animate={imageAnimate}
               transition={{ duration: 2, delay: 1 }}
               src={project.image}
               alt={project.title}
               className={`${styles.Image} d-none d-lg-block`}
             />
-            {/* )} */}
           </Col>
           <Col xs={12} lg={5}>
             <Row>
@@ -62,18 +79,14 @@ const PortfolioDetailPage = () => {
                   <p className={styles.Text}>{project.overview}</p>
                 </motion.div>
                 {/* image on displayed in small screens */}
-                {/* {
-                  !isSmallScreen( */}
                 <motion.img
-                  initial={{ opacity: 0, x: -300 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={imageInitial}
+                  animate={imageAnimate}
                   transition={{ duration: 2, delay: 3 }}
                   src={project.image}
                   alt={project.title}
                   className={`${styles.Image} d-block d-lg-none`}
                 />
-                {/* )
-                } */}
               </Col>
             </Row>
             <Row className="justify-content-center">
@@ -81,7 +94,7 @@ const PortfolioDetailPage = () => {
               <motion.div
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2, delay: 5 }}
+                transition={{ duration: 2, delay: techDelay }}
               >
                 <PortfolioProjectTechnologies
                   technologies={project.technologies}
