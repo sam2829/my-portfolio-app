@@ -4,14 +4,22 @@ import { motion } from "framer-motion";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CustomButton from "../../components/CustomButton.js";
+import useIsSmallScreen from "../../hooks/useIsSmallScreen.js";
 
 // component to render buttons for portfolio detail page
 const PortfolioDetailButtons = ({ liveSite }) => {
+
+  // Check if app is running in small screen
+  const isSmallScreen = useIsSmallScreen()
+  // variables for motion framer
+  const buttonDelay = isSmallScreen ? 7 : 3
+
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2, delay: 7 }}
+      transition={{ duration: 2, delay: buttonDelay }}
     >
       <Row className="justify-content-center">
         <Col xs={12} lg={5}>
