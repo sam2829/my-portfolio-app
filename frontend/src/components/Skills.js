@@ -24,15 +24,15 @@ const Skills = ({ skills }) => {
   switch (skills) {
     case "frontendSkills":
       skillsList = frontendSkills;
-      delay = 0;
+      delay = 1;
       break;
     case "backendSkills":
       skillsList = backendSkills;
-      delay = 1.5;
+      delay = 3;
       break;
     case "toolsSkills":
       skillsList = toolsSkills;
-      delay = 3;
+      delay = 4;
       break;
     default:
       skillsList = [];

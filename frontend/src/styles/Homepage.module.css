@@ -17,6 +17,7 @@
   border-radius: 10px;
   margin: 20px 0 20px 0;
   object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .Text {
