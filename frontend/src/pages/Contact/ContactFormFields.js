@@ -10,6 +10,8 @@ const ContactFormFields = ({
   value,
   as = "input",
   rows,
+  handleChange,
+  placeholder,
 }) => {
   return (
     <>
@@ -22,6 +24,8 @@ const ContactFormFields = ({
         required
         className={styles.FormInput}
         rows={rows}
+        onChange={handleChange}
+        placeholder={placeholder}
       />
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/ContactForm.module.css";
 import Row from "react-bootstrap/Row";
@@ -19,6 +19,23 @@ const ContactForm = () => {
     transition: { duration: 2, delay: isSmallScreen ? 3 : 1 },
   };
 
+  // State for contact form input fields
+  const [formEmailData, setFormEmailData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const { name, email, subject, message } = formEmailData;
+
+  // handle change in form fields
+  const handleChange = (event) => {
+    setFormEmailData({
+      ...formEmailData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <motion.div {...motionConfig} className={styles.ContactForm}>
       <Row>
@@ -30,29 +47,37 @@ const ContactForm = () => {
           title="Name"
           type="text"
           name="name"
-          value="Your full name"
+          value={name}
+          placeholder="Your full name"
+          handleChange={handleChange}
         />
         {/* import email field */}
         <ContactFormFields
           title="Email"
           type="email"
           name="email"
-          value="Your email address"
+          value={email}
+          placeholder="Your email address"
+          handleChange={handleChange}
         />
         {/* import subject field */}
         <ContactFormFields
           title="Subject"
           type="text"
           name="subject"
-          value="Your subject"
+          value={subject}
+          placeholder="Your subject"
+          handleChange={handleChange}
         />
         {/* import message field */}
         <ContactFormFields
           title="Message"
           as="textarea"
           name="message"
-          value="Your message here"
+          value={message}
+          placeholder="Your message here"
           rows={5}
+          handleChange={handleChange}
         />
       </Form>
       <div className="my-3">
