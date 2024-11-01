@@ -8,4 +8,4 @@ class TechnologySerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Technology
-        fields = ['name']
+        fields = ['name', 'skill_type']

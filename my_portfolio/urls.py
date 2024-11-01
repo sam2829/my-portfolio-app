@@ -23,5 +23,6 @@ urlpatterns = [
     path('', root_route),
     path('admin/', admin.site.urls),
     path('api/projects/', include('projects.urls')),
+    path('api/technologies/', include('technologies.urls')),
     path('api/send-email/', include('emailapp.urls')),
 ]
