@@ -3,7 +3,6 @@
     border-radius: 5px;
     margin: 20px 0 20px 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* min-height: 95%; */
     background-color: #d0d0d0;
 }
 
@@ -14,35 +13,9 @@
     color: #1e90ff;
 }
 
-.FormLabel {
-    font-size: 14px;
-    font-weight: 700;
-    color: #333333;
-    margin-right: 100%;
-    padding-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.FormInput {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 12px;
-    font-size: 14px;
-    color: #333333;
-}
-
 /* Styles for screen sizes larger than 992px wide */
 @media (min-width: 992px) {
     .FormHeading {
         font-size: 28px;
-    }
-
-    .FormLabel {
-        font-size: 18px;
-    }
-
-    .FormInput {
-        font-size: 16px;
     }
 }

@@ -4,49 +4,57 @@ import styles from "../../styles/ContactForm.module.css";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import CustomButton from "../../components/CustomButton.js";
+import ContactFormFields from "./ContactFormFields.js";
+import useIsSmallScreen from "../../hooks/useIsSmallScreen.js";
 
 // Component to render contact form
 const ContactForm = () => {
+  // define if app is in small screen
+  const isSmallScreen = useIsSmallScreen();
+
+  // variables for motion framer
+  const motionConfig = {
+    initial: { opacity: 0, x: 300 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 2, delay: isSmallScreen ? 3 : 1 },
+  };
+
   return (
-    <motion.div className={styles.ContactForm}>
+    <motion.div {...motionConfig} className={styles.ContactForm}>
       <Row>
         <h6 className={styles.FormHeading}>Contact Form</h6>
       </Row>
-      <Form.Group>
-        <Form.Label className={styles.FormLabel}>Name</Form.Label>
-        <Form.Control
+      <Form>
+        {/* import Name field */}
+        <ContactFormFields
+          title="Name"
           type="text"
           name="name"
           value="Your full name"
-          required
-          className={styles.FormInput}
         />
-        <Form.Label className={styles.FormLabel}>Email</Form.Label>
-        <Form.Control
+        {/* import email field */}
+        <ContactFormFields
+          title="Email"
           type="email"
           name="email"
           value="Your email address"
-          required
-          className={styles.FormInput}
         />
-        <Form.Label className={styles.FormLabel}>Subject</Form.Label>
-        <Form.Control
+        {/* import subject field */}
+        <ContactFormFields
+          title="Subject"
           type="text"
           name="subject"
           value="Your subject"
-          required
-          className={styles.FormInput}
         />
-        <Form.Label className={styles.FormLabel}>Message</Form.Label>
-        <Form.Control
+        {/* import message field */}
+        <ContactFormFields
+          title="Message"
           as="textarea"
           name="message"
-          value="Type your message here"
-          required
+          value="Your message here"
           rows={5}
-          className={styles.FormInput}
         />
-      </Form.Group>
+      </Form>
       <div className="my-3">
         <CustomButton text="Submit" />
       </div>
