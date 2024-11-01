@@ -18,6 +18,13 @@
   font-weight: 700;
 }
 
+.InfoColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
 /* Styles for screen sizes larger than 992px wide */
 @media (min-width: 992px) {
   .Heading {
@@ -28,5 +35,6 @@
 
   .Text {
     font-size: 18px;
+    margin: 0 0 200px 0;
   }
 }

@@ -14,7 +14,7 @@ const ContactPage = () => {
           <h1 className={styles.Heading}>Contact Me</h1>
         </Row>
         <Row>
-          <Col xs={12} lg={5} className="mx-auto">
+          <Col xs={12} lg={5} className={`${styles.InfoColumn} mx-auto`}>
           <Row>
             <p className={styles.Text}>
               I'm always excited to explore new career opportunities and connect
@@ -28,7 +28,7 @@ const ContactPage = () => {
               <Icons />
             </Row>
           </Col>
-          <Col xs={12} lg={5} className="align-items-center mx-auto">
+          <Col xs={12} lg={5} className="mx-auto">
           <ContactForm />
           </Col>
         </Row>
