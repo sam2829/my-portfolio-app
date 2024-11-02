@@ -5,22 +5,31 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DropdownButton from "../../components/DropdownButton";
 import PortfolioProjectList from "./PortfolioProjectList";
-import {DUMMYPROJECTS, DUMMYTECHS} from '../../api/dummyData.js'
-
+import useFetchPortfolioProjects from "../../hooks/useFetchPortfolioProjects.js";
+import LoadingSpinner from "../../components/LoadingSpinner.js";
+import ErrorMessage from "../../components/ErrorMessage.js";
 
 // component to render the portfolio page
 const PortfolioPage = () => {
+  // custom hook to fetch projects
+  const { projectsData, isLoading, error } = useFetchPortfolioProjects();
+  console.log(projectsData);
   // use state to select the technology
   const [selectedTechnology, setSelectedTechnology] = useState("All");
 
   // Get list of unnique technologies to select
-  const uniqueTechs = ["All", ...new Set(DUMMYTECHS.map((tech) => tech.name))];
+  const uniqueTechs = [
+    "All",
+    ...[
+      ...new Set(projectsData.flatMap((project) => project.technologies)),
+    ].sort(),
+  ];
 
   // Filter projects based on selected technology
   const filteredProjects =
     selectedTechnology === "All"
-      ? DUMMYPROJECTS
-      : DUMMYPROJECTS.filter((project) =>
+      ? projectsData
+      : projectsData.filter((project) =>
           project.technologies.includes(selectedTechnology)
         );
 
@@ -47,7 +56,10 @@ const PortfolioPage = () => {
             setSelectedTechnology={setSelectedTechnology}
           />
         </Row>
-        {/* dummy run to display projects */}
+        {/* Import loading spinner when fetching data */}
+        {isLoading && <LoadingSpinner />}
+        {/* Import error message if fetch failed */}
+        {error && <ErrorMessage error={error} />}
         {/* import portfolio projects */}
         <PortfolioProjectList
           key={selectedTechnology}

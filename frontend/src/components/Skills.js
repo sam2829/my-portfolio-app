@@ -6,7 +6,7 @@ import ErrorMessage from "./ErrorMessage";
 
 //  component to render list of skills
 const Skills = ({ skillsData, isLoading, error, skills }) => {
-  console.log(skillsData);
+  
   // Varibale to start animation
   const controls = useAnimation();
   // Determine which skills list to render based on the prop value

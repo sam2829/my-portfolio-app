@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// custom hook for fetching technologies from custom api
 const useFetchTechnologies = () => {
   // State management for skills
   const [skillsData, setSkillsData] = useState({
