@@ -1,70 +1,56 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useMemo } from "react";
+import { motion, useAnimation } from "framer-motion";
 import styles from "../styles/Skills.module.css";
+import LoadingSpinner from "./LoadingSpinner";
 
 //  component to render list of skills
-const Skills = ({ skillsData, skills }) => {
+const Skills = ({ skillsData, isLoading, error, skills }) => {
+  console.log(skillsData);
+  // Varibale to start animation
+  const controls = useAnimation();
   // Determine which skills list to render based on the prop value
-  const skillsList = skillsData[skills] || [];
+  const skillsList = useMemo(
+    () => skillsData[skills] || [],
+    [skillsData, skills]
+  );
+  // Variable to delay when lists are displayed
   const delay =
-    skills === "frontendSkills" ? 5 : skills === "backendSkills" ? 7 : 12;
+    skills === "frontendSkills" ? 1 : skills === "backendSkills" ? 3 : 5;
 
-  // const frontendSkills = [
-  //   "HTML",
-  //   "CSS",
-  //   "Bootstrap",
-  //   "Tailwind CSS",
-  //   "JavaScript",
-  //   "React.JS",
-  // ];
-
-  // const backendSkills = ["Python", "Django", "Django Rest"];
-
-  // const toolsSkills = ["Git", "GitHub", "Heroku", "Cloudinary", "Cloudfare"];
-
-  // Determine which skills list to render based on the prop value
-  // let skillsList;
-  // let delay = 0;
-
-  // switch (skills) {
-  //   case "frontendSkills":
-  //     skillsList = frontendSkills;
-  //     delay = 1;
-  //     break;
-  //   case "backendSkills":
-  //     skillsList = backendSkills;
-  //     delay = 3;
-  //     break;
-  //   case "toolsSkills":
-  //     skillsList = toolsSkills;
-  //     delay = 4;
-  //     break;
-  //   default:
-  //     skillsList = [];
-  // }
+  // use effect hook t start animation when skills list is fetched
+  useEffect(() => {
+    if (skillsList.length > 0) {
+      controls.start("visible");
+    }
+  }, [skillsList, controls]);
 
   return (
     <div>
-      {/* use motion.ul to create animation for ul components */}
-      <motion.ul
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { transition: { staggerChildren: 0.2 } },
-          visible: {
-            transition: { staggerChildren: 0.2, delayChildren: delay },
-          },
-        }}
-        className={styles.SkillsList}
-      >
-        {skillsList.length &&
-          skillsList.map((skill, index) => (
-            // use motion.li to create animation for li components
+      {/* Loading info */}
+      {isLoading && <LoadingSpinner />}
+      {/* Failed loading */}
+      {error && <p>{error}</p>}
+      {/* Use motion.ul to create animation for ul components */}
+      {/* only render is skills list is greater than 0 */}
+      {skillsList.length > 0 ? (
+        <motion.ul
+          initial="hidden"
+          animate={controls}
+          variants={{
+            hidden: { transition: { staggerChildren: 0.2 } },
+            visible: {
+              transition: { staggerChildren: 0.2, delayChildren: delay },
+            },
+          }}
+          className={styles.SkillsList}
+        >
+          {skillsList.map((skill, index) => (
+            // Use motion.li to create animation for li components
             <motion.li
               key={index}
               variants={{
                 hidden: { opacity: 0, scale: 0.5 },
-                visible: { opacity: 1, scale: [0.8, 5, 1] },
+                visible: { opacity: 1, scale: [0.5, 1.5, 1] },
               }}
               transition={{ type: "spring" }}
               className={styles.ListItems}
@@ -72,8 +58,11 @@ const Skills = ({ skillsData, skills }) => {
               {skill}
             </motion.li>
           ))}
-        {!skillsList.length && <p>No Skills....</p>}
-      </motion.ul>
+        </motion.ul>
+      ) : (
+        // message is there are no skills for this section
+        !isLoading && !error && <p>No Skills....</p>
+      )}
     </div>
   );
 };

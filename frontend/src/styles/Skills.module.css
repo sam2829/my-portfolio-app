@@ -1,6 +1,7 @@
 .SkillsList {
     padding: 0;
     text-align: left;
+    min-height: 100px;
 }
 
 .ListItems {

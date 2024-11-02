@@ -1,51 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../../styles/AboutPage.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Skills from "../../components/Skills";
 import AboutPageText from "./AboutPageText";
-import axios from "axios";
+import useFetchTechnologies from "../../hooks/useFetchTechnologies";
 
 const AboutPage = () => {
-  // State management for skills
-  const [skillsData, setSkillsData] = useState({
-    frontendSkills: [],
-    backendSkills: [],
-    toolsSkills: [],
-  });
-
-  // useEffect hook to fetch skills from api
-  useEffect(() => {
-    // Fetch the skills data from the API
-    const fetchSkills = async () => {
-      try {
-        const { data } = await axios.get(
-          "http://127.0.0.1:8000/api/technologies/"
-        );
-        console.log("API response data:", data);
-
-        // Organize skills by skill_type
-        const organizedSkills = {
-          frontendSkills: data.results
-            .filter((skill) => skill.skill_type === "Frontend")
-            .map((skill) => skill.name),
-          backendSkills: data.results
-            .filter((skill) => skill.skill_type === "Backend")
-            .map((skill) => skill.name),
-          toolsSkills: data.results
-            .filter((skill) => skill.skill_type === "Tools")
-            .map((skill) => skill.name),
-        };
-
-        setSkillsData(organizedSkills);
-      } catch (error) {
-        console.error("Error fetching skills:", error);
-      }
-    };
-
-    fetchSkills();
-  }, []);
+  // custom hook to fetch technologies
+  const { skillsData, isLoading, error } = useFetchTechnologies();
 
   return (
     <Container>
@@ -77,13 +41,28 @@ const AboutPage = () => {
             </h3>
             <h6 className={styles.SkillsHeading}>Frontend:</h6>
             {/* important list of skills depending on prop passed */}
-            <Skills skillsData={skillsData} skills="frontendSkills" />
+            <Skills
+              skillsData={skillsData}
+              isLoading={isLoading}
+              error={error}
+              skills="frontendSkills"
+            />
             <h6 className={styles.SkillsHeading}>Backend:</h6>
             {/* important list of skills depending on prop passed */}
-            <Skills skillsData={skillsData} skills="backendSkills" />
+            <Skills
+              skillsData={skillsData}
+              isLoading={isLoading}
+              error={error}
+              skills="backendSkills"
+            />
             <h6 className={styles.SkillsHeading}>Tools:</h6>
             {/* important list of skills depending on prop passed */}
-            <Skills skillsData={skillsData} skills="toolsSkills" />
+            <Skills
+              skillsData={skillsData}
+              isLoading={isLoading}
+              error={error}
+              skills="toolsSkills"
+            />
           </Col>
         </Row>
       </main>
