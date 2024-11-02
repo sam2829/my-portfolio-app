@@ -18,7 +18,7 @@ const useFetchTechnologies = () => {
       setIsLoading(true);
       try {
         const { data } = await axios.get(
-          "http://127.0.0.1:8000/api/technologiesssss/"
+          "http://127.0.0.1:8000/api/technologies/"
         );
         console.log("API response data:", data);
 

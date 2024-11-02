@@ -1,23 +1,37 @@
+.SkillsContainer {
+  min-height: 90px;
+}
+
 .SkillsList {
-    padding: 0;
-    text-align: left;
-    min-height: 100px;
+  padding: 0;
+  text-align: left;
 }
 
 .ListItems {
-    list-style-type: none;
-    font-size: 14px;
-    color: white;
-    background-color: #1e90ff;
-    padding: 8px 10px;
-    margin: 8px;
-    border-radius: 5px;
-    display: inline-block;
+  list-style-type: none;
+  font-size: 14px;
+  color: white;
+  background-color: #1e90ff;
+  padding: 8px 10px;
+  margin: 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.Text {
+  font-size: 16px;
+  color: #333333;
+  margin: 20px 0 20px 0;
+  font-weight: 700;
 }
 
 /* Styles for screen sizes larger than 992px wide */
 @media (min-width: 992px) {
-    .ListItems {
-        font-size: 16px;
-    }
+  .ListItems {
+    font-size: 16px;
+  }
+
+  .Text {
+    font-size: 18px;
+  }
 }

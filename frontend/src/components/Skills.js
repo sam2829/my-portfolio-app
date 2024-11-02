@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { motion, useAnimation } from "framer-motion";
 import styles from "../styles/Skills.module.css";
 import LoadingSpinner from "./LoadingSpinner";
+import ErrorMessage from "./ErrorMessage";
 
 //  component to render list of skills
 const Skills = ({ skillsData, isLoading, error, skills }) => {
@@ -25,13 +26,13 @@ const Skills = ({ skillsData, isLoading, error, skills }) => {
   }, [skillsList, controls]);
 
   return (
-    <div>
+    <div className={styles.SkillsContainer}>
       {/* Loading info */}
       {isLoading && <LoadingSpinner />}
-      {/* Failed loading */}
-      {error && <p>{error}</p>}
+      {/* Failed fetching technologies */}
+      {error && <ErrorMessage error={error} />}
       {/* Use motion.ul to create animation for ul components */}
-      {/* only render is skills list is greater than 0 */}
+      {/* only render skills if list is greater than 0 */}
       {skillsList.length > 0 ? (
         <motion.ul
           initial="hidden"
@@ -61,7 +62,10 @@ const Skills = ({ skillsData, isLoading, error, skills }) => {
         </motion.ul>
       ) : (
         // message is there are no skills for this section
-        !isLoading && !error && <p>No Skills....</p>
+        !isLoading &&
+        !error && (
+          <p className={styles.Text}>No Skills for this skill type.... yet!</p>
+        )
       )}
     </div>
   );
