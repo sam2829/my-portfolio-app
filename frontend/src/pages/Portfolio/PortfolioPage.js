@@ -13,7 +13,7 @@ import ErrorMessage from "../../components/ErrorMessage.js";
 const PortfolioPage = () => {
   // custom hook to fetch projects
   const { projectsData, isLoading, error } = useFetchPortfolioProjects();
-  console.log(projectsData);
+
   // use state to select the technology
   const [selectedTechnology, setSelectedTechnology] = useState("All");
 
@@ -61,10 +61,18 @@ const PortfolioPage = () => {
         {/* Import error message if fetch failed */}
         {error && <ErrorMessage error={error} />}
         {/* import portfolio projects */}
-        <PortfolioProjectList
-          key={selectedTechnology}
-          filteredProjects={filteredProjects}
-        />
+        {filteredProjects.length > 0 && (
+          <PortfolioProjectList
+            key={selectedTechnology}
+            filteredProjects={filteredProjects}
+          />
+        )}
+        {/* import message if not projects available */}
+        {!isLoading && !error && (
+          <p className={styles.Text}>
+            No projects for this skill type.... yet!
+          </p>
+        )}
       </main>
     </Container>
   );
