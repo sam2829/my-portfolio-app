@@ -20,7 +20,7 @@ const useFetchPortfolioProjects = (id) => {
           : "http://127.0.0.1:8000/api/projects/";
 
         const { data } = await axios.get(endpoint);
-        console.log("API response data:", data);
+        // console.log("API response data:", data);
 
         // setting data depending on whether for detail page or all projects
         if (id) {
@@ -32,7 +32,7 @@ const useFetchPortfolioProjects = (id) => {
         // setProjectsData(data.results);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching projects:", error);
+        // console.error("Error fetching projects:", error);
         setError("Failed to fetch projects");
         setIsLoading(false);
       }

@@ -31,7 +31,6 @@ const PortfolioDetailPage = () => {
     initial: { opacity: 0, x: 300 },
     animate: { opacity: 1, x: 0 },
   };
-  console.log(projectsData);
 
   return (
     <Container>
@@ -58,6 +57,7 @@ const PortfolioDetailPage = () => {
               <Col xs={12} lg={5}>
                 <Row>
                   <Col xs={12}>
+                    {/* motion div used for animation */}
                     <motion.div
                       {...motionConfig}
                       transition={{ duration: duration, delay: 1 }}
@@ -65,7 +65,7 @@ const PortfolioDetailPage = () => {
                       <h6 className={styles.SubHeading}>Overview</h6>
                       <p className={styles.Text}>{projectsData.overview}</p>
                     </motion.div>
-                    {/* Image displayed on small screens */}
+                    {/* Image displayed on small screens. Motion used for animation */}
                     <motion.img
                       initial={imageInitial}
                       animate={imageAnimate}
@@ -77,14 +77,14 @@ const PortfolioDetailPage = () => {
                   </Col>
                 </Row>
                 <Row className="justify-content-center">
-                  {/* Import technologies list */}
+                  {/* Import technologies list. Motion used for animation */}
                   <motion.div
                     {...motionConfig}
                     transition={{ duration: duration, delay: techDelay }}
                   >
-                    {/* <PortfolioProjectTechnologies
+                    <PortfolioProjectTechnologies
                       technologies={projectsData.technologies}
-                    /> */}
+                    />
                   </motion.div>
                 </Row>
               </Col>

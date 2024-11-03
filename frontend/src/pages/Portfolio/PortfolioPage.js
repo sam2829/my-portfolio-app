@@ -68,7 +68,7 @@ const PortfolioPage = () => {
           />
         )}
         {/* import message if not projects available */}
-        {!isLoading && !error && (
+        {!isLoading && !error && filteredProjects === 0 && (
           <p className={styles.Text}>
             No projects for this skill type.... yet!
           </p>
