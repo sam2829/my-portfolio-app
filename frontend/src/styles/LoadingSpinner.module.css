@@ -19,4 +19,12 @@
     color: #1e90ff;
     text-align: center;
     border-width: 7px;
-  }
+}
+
+.SpinnerButton {
+    height: 40px;
+    width: 40px;
+    border-width: 5px;
+    color: #1e90ff;
+}
+

@@ -5,7 +5,9 @@ import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import CustomButton from "../../components/CustomButton.js";
 import ContactFormFields from "./ContactFormFields.js";
+import LoadingSpinner from "../../components/LoadingSpinner.js";
 import useIsSmallScreen from "../../hooks/useIsSmallScreen.js";
+import axios from "axios";
 
 // Component to render contact form
 const ContactForm = () => {
@@ -28,6 +30,10 @@ const ContactForm = () => {
   });
   const { name, email, subject, message } = formEmailData;
 
+  // state for submitting form
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
+
   // handle change in form fields
   const handleChange = (event) => {
     setFormEmailData({
@@ -36,12 +42,38 @@ const ContactForm = () => {
     });
   };
 
+  // handle for submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    console.log("sending...");
+
+    try {
+      await axios.post("http://127.0.0.1:8000/api/send-email/", formEmailData);
+
+      //handle response from backend
+      console.log("success");
+      setFormEmailData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (err) {
+      setErrors(err.response?.data?.errors || {});
+      console.log("error sending email", err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <motion.div {...motionConfig} className={styles.ContactForm}>
       <Row>
         <h6 className={styles.FormHeading}>Contact Form</h6>
       </Row>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         {/* import Name field */}
         <ContactFormFields
           title="Name"
@@ -50,6 +82,7 @@ const ContactForm = () => {
           value={name}
           placeholder="Your full name"
           handleChange={handleChange}
+          errors={errors}
         />
         {/* import email field */}
         <ContactFormFields
@@ -59,6 +92,7 @@ const ContactForm = () => {
           value={email}
           placeholder="Your email address"
           handleChange={handleChange}
+          errors={errors}
         />
         {/* import subject field */}
         <ContactFormFields
@@ -68,6 +102,7 @@ const ContactForm = () => {
           value={subject}
           placeholder="Your subject"
           handleChange={handleChange}
+          errors={errors}
         />
         {/* import message field */}
         <ContactFormFields
@@ -78,11 +113,14 @@ const ContactForm = () => {
           placeholder="Your message here"
           rows={5}
           handleChange={handleChange}
+          errors={errors}
         />
+        {/* import submit custom button and loading spinner */}
+        <div className={`${styles.ButtonContainer} my-3`}>
+          {!isSubmitting && <CustomButton text="Submit" />}
+          {isSubmitting && <LoadingSpinner buttonSpinner />}
+        </div>
       </Form>
-      <div className="my-3">
-        <CustomButton text="Submit" />
-      </div>
     </motion.div>
   );
 };

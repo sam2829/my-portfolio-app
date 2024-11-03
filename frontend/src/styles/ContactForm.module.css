@@ -13,6 +13,10 @@
     color: #1e90ff;
 }
 
+.ButtonContainer {
+    min-height: 50px;
+}
+
 /* Styles for screen sizes larger than 992px wide */
 @media (min-width: 992px) {
     .FormHeading {
