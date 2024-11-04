@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import PortfolioDetailPage from "./pages/Portfolio/PortfolioDetailPage";
 import AlertMessage, { useAlert } from "./components/AlertMessage";
 import NotFoundPage from "./pages/ErrorPage/NotFoundPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // to show alert message
@@ -22,6 +23,8 @@ function App() {
   return (
     <div className={styles.App}>
       <Router>
+        {/* ensure new pages load at the top */}
+        <ScrollToTop />
         {/* import navbar */}
         <NavBar />
         {/** Display the show alert message */}
