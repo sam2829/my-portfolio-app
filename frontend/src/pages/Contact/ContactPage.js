@@ -8,7 +8,7 @@ import Icons from "../../components/Icons";
 import ContactForm from "./ContactForm";
 
 // component to render the contact page
-const ContactPage = () => {
+const ContactPage = ({showAlert}) => {
 
   // variables for motion framer
   const motionConfig = {
@@ -43,7 +43,7 @@ const ContactPage = () => {
           </Col>
           <Col xs={12} lg={5} className="mx-auto">
           {/* import contact form */}
-            <ContactForm />
+            <ContactForm showAlert={showAlert} />
           </Col>
         </Row>
       </main>

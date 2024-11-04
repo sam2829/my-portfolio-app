@@ -10,7 +10,7 @@ import useIsSmallScreen from "../../hooks/useIsSmallScreen.js";
 import axios from "axios";
 
 // Component to render contact form
-const ContactForm = () => {
+const ContactForm = ({ showAlert }) => {
   // define if app is in small screen
   const isSmallScreen = useIsSmallScreen();
 
@@ -46,13 +46,14 @@ const ContactForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    console.log("sending...");
 
     try {
       await axios.post("http://127.0.0.1:8000/api/send-email/", formEmailData);
 
+      // success alert message
+      showAlert("success", `Your email was successfully sent!`);
       //handle response from backend
-      console.log("success");
+      // console.log("success");
       setFormEmailData({
         name: "",
         email: "",
@@ -61,8 +62,13 @@ const ContactForm = () => {
       });
       setErrors({});
     } catch (err) {
+      // failed message alert
+      showAlert(
+        "warning",
+        `Error sending email. Please check contact form for errors and try again.`
+      );
       setErrors(err.response?.data?.errors || {});
-      console.log("error sending email", err);
+      // console.log("error sending email", err);
     } finally {
       setIsSubmitting(false);
     }

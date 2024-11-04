@@ -1,6 +1,6 @@
 import React from "react";
 import Alert from "react-bootstrap/Alert";
-import styles from '../styles/ContactFormErrorMessage.module.css'
+import styles from '../../styles/ContactFormErrorMessage.module.css'
 
 // component to render error alerts in contact form
 const ContactFormErrorMessage = ({ errors, fieldName }) => {

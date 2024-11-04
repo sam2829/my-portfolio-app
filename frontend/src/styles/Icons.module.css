@@ -10,7 +10,7 @@
 }
 
 .Icon i:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 /* Styles for screen sizes larger than 992px wide */
@@ -35,5 +35,5 @@
 }
 
 .FooterIcon i:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }

@@ -1,0 +1,16 @@
+.Alert {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* color: white;
+  background-color: #1e90ff; */
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.SuccessAlert {
+  color: white;
+  background-color: #1e90ff;
+}

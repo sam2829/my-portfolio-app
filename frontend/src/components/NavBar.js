@@ -8,6 +8,7 @@ import styles from "../styles/NavBar.module.css";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import NavBarNavLink from "./NavBarNavLink";
 import myImage from "../images/my-image.jpg";
+import logoImage from '../images/thumbnail.jpg'
 
 // Component for rendering Navbar
 const NavBar = () => {
@@ -41,7 +42,7 @@ const NavBar = () => {
               <Link to="/" className={styles.Link}>
                 <img
                   className={styles.Image}
-                  src={myImage}
+                  src={logoImage}
                   alt="Sam Scarisbrick"
                 />
                 <div className={styles.textContainer}>
