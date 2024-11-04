@@ -7,7 +7,6 @@ import Container from "react-bootstrap/Container";
 import styles from "../styles/NavBar.module.css";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import NavBarNavLink from "./NavBarNavLink";
-import myImage from "../images/my-image.jpg";
 import logoImage from '../images/thumbnail.jpg'
 
 // Component for rendering Navbar
