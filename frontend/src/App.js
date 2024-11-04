@@ -13,6 +13,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 import Footer from "./components/Footer";
 import PortfolioDetailPage from "./pages/Portfolio/PortfolioDetailPage";
 import AlertMessage, { useAlert } from "./components/AlertMessage";
+import NotFoundPage from "./pages/ErrorPage/NotFoundPage";
 
 function App() {
   // to show alert message
@@ -42,6 +43,8 @@ function App() {
             path="/contact"
             element={<ContactPage showAlert={showAlert} />}
           />
+          {/* render not found 404 page */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         {/* import footer */}
         <Footer />

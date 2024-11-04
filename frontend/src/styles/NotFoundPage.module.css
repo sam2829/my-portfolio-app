@@ -1,0 +1,42 @@
+.Main {
+  margin-top: 136px;
+  padding-bottom: 60px;
+  min-height: 80vh;
+}
+
+.Image {
+  height: 200px;
+  width: 200px;
+  margin: 60px 0 60px 0;
+  object-fit: cover;
+  background-color: #f4f4f4;
+}
+
+.Heading {
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #1e90ff;
+  font-weight: 700;
+}
+
+.Text {
+  font-size: 16px;
+  color: #333333;
+  margin: 20px 0 20px 0;
+  font-weight: 700;
+}
+
+/* Styles for screen sizes larger than 992px wide */
+@media (min-width: 992px) {
+  .Image {
+    height: 200px;
+    width: 300px;
+  }
+  .Heading {
+    font-size: 50px;
+  }
+  .Text {
+    font-size: 18px;
+  }
+}
