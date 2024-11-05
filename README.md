@@ -6,7 +6,7 @@ Welcome to my portfolio website! As an eager junior developer, I've designed thi
 
 Here is a live version of the project dksjfbnsdjkfbndskf
 
-responsive link goes here ksjbaskjdf
+![Am I Responsive Screenshot](/docs/readme_screenshots/am-i-responsive.png)
 
 ## Content
 
@@ -521,6 +521,12 @@ Success:
 Error Fail:
 
 ![Contact Form Error Screenshot](/docs/readme_screenshots/error-alert-message.png)
+
+***Error Page***
+
+Error page is displayed when the user is trying to visit a page that doesn'y exist and provides them with a link back to the homepage.
+
+![Error Page Screenshot](/docs/readme_screenshots/error-page.png)
 
 #### The Surface Plane
 

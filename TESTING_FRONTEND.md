@@ -87,21 +87,23 @@ Manual testing was carried out throughout the project, making sure user stories 
 
 Homepage:
 
-
+![Desktop Homepage Lighthouse Screenshot](/docs/readme_screenshots/desktop-homepage-lighthouse.png)
 
 About page:
 
-
+![Desktop About Page Lighthouse Screenshot](/docs/readme_screenshots/desktop-about-page-lighthouse.png)
 
 Portfolio page:
 
+![Desktop Portfolio Page Lighthouse Screenshot](/docs/readme_screenshots/desktop-portfolio-page-lighthouse.png)
 
 Portfolio Detail page:
 
+![Desktop Portfolio Detail Page Lighthouse Screenshot](/docs/readme_screenshots/desktop-portfolio-detail-page-lighthouse.png)
 
 Contact page:
 
-
+![Desktop Contact Page Lighthouse Screenshot](/docs/readme_screenshots/desktop-contact-page-lighthouse.png)
 
 </details>
 
@@ -111,21 +113,23 @@ Contact page:
 
 Homepage:
 
-
+![Mobile Homepage Lighthouse Screenshot](/docs/readme_screenshots/mobile-homepage-lighthouse.png)
 
 About page:
 
-
+![Mobile About Page Lighthouse Screenshot](/docs/readme_screenshots/mobile-about-page-lighthouse.png)
 
 Portfolio page:
 
+![Mobile Portfolio Page Lighthouse Screenshot](/docs/readme_screenshots/mobile-portfolio-page-lighthouse.png)
 
 Portfolio Detail page:
 
+![Mobile Portfolio Detail Page Lighthouse Screenshot](/docs/readme_screenshots/mobile-portfolio-detail-page-lighthouse.png)
 
 Contact page:
 
-
+![Mobile Contact Page Lighthouse Screenshot](/docs/readme_screenshots/mobile-contact-page-lighthouse.png)
 
 </details>
 

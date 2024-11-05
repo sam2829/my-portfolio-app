@@ -42,9 +42,9 @@ const PortfolioPage = () => {
         <Row className="justify-content-center">
           <Col xs={12} md={8}>
             <p className={styles.Text}>
-              Welcome to my portfolio! Here you'll find a slection of projects
+              Welcome to my portfolio! Here you'll find a selection of projects
               that demonstrate my skills in web development. I'm passionate
-              about creating functional ans aesthetically pleasing applications.
+              about creating functional and aesthetically pleasing applications.
             </p>
           </Col>
         </Row>
