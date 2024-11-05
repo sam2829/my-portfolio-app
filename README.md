@@ -65,11 +65,11 @@ Data model schema was planned with the API endpoints, using an entity relationsh
 
 The custom models Sam Scarisbrick Portfolio are:
 
-***Projects***
+**_Projects_**
 
 The projects model was created so I could easily add new projects to the site using the admin page. This would make it a lot easier for me to add new projects without having to change any code.
 
-***Technologies***
+**_Technologies_**
 
 The technologies model was created so I can create new technologies Ive learnt on my journey. This would make things a lot easier to add new technologies to my list rather than trying to define a set list or change code in the future. This is linked to the projects model by a many to many field.
 
@@ -79,15 +79,15 @@ An entity relationship diagram was created using drawSQL to show the schemas for
 
 ## API Endpoints
 
-| URL | HTTP Method | CRUD Operation | View name |
-| --- | --- | --- | --- |
-| `Projects Endpoints` |
-| /api/projects | GET | List all profiles | LIST |
-| /api/projects/<int:pk> | GET | Get an individual project by id | DETAIL |
+| URL                      | HTTP Method | CRUD Operation                  | View name |
+| ------------------------ | ----------- | ------------------------------- | --------- |
+| `Projects Endpoints`     |
+| /api/projects            | GET         | List all profiles               | LIST      |
+| /api/projects/<int:pk>   | GET         | Get an individual project by id | DETAIL    |
 | `Technologies Endpoints` |
-| /api/technologies | GET | List of all technologies | LIST
-| `Email Endpoints` |
-| /api/send-email/ | POST | Ability for user to post email | POST |
+| /api/technologies        | GET         | List of all technologies        | LIST      |
+| `Email Endpoints`        |
+| /api/send-email/         | POST        | Ability for user to post email  | POST      |
 
 [back to top](#sam-scarisbrick-portfolio)
 
@@ -130,7 +130,7 @@ I have included details of my testing during and post development in a separate 
 
 ## Deployment
 
-***GitHub***
+**_GitHub_**
 
 This project was developed by using a Visual Studio Code. I first created a project in my folders and opened in VS Code.
 
@@ -141,9 +141,9 @@ This project was developed by using a Visual Studio Code. I first created a proj
 - To then initially set up your workspace to the repository you first need add the repository with the command 'git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git'.
 - Next add the changes with the command 'git add .'.
 - Next commit the changes with the command 'git commit -m "initial commit"'.
-' Next push to GitHub with the command 'git push -u origin main'. Once this push has been made, you then only have to use the command 'git push'.
+  ' Next push to GitHub with the command 'git push -u origin main'. Once this push has been made, you then only have to use the command 'git push'.
 
-***Version Control***
+**_Version Control_**
 
 For version control the following steps were made:
 
@@ -152,7 +152,7 @@ For version control the following steps were made:
 - To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occurred.
 - To then move the changes to GitHub, use the following command - git push
 
-***Clone Repo***
+**_Clone Repo_**
 
 Creating a clone allows you to make a copy of the repository at the specific point in time. This lets you run a copy of the project locally. This can be done by:
 
@@ -163,7 +163,7 @@ Creating a clone allows you to make a copy of the repository at the specific poi
 - Type "git clone" and paste the copied HTTPS link from GitHub.
 - Press enter and git will clone the repository to your local machine.
 
-***Forking the GitHub Repository***
+**_Forking the GitHub Repository_**
 
 Forking the GitHub repository allows you to make a copy of the original repository on your GitHub account to view and make changes without it effecting the original repository. This can be done by:
 
@@ -173,11 +173,12 @@ Forking the GitHub repository allows you to make a copy of the original reposito
 
 [back to top](#sam-scarisbrick-portfolio)
 
-***Deployment to Heroku***
+**_Deployment to Heroku_**
 
 For deployment to Heroku the following steps were made:
 
 - First sign in to your Heroku account.
+
   - On the top right of the page there is a drop-down menu called "new", click this and click on "create new app".
   - You then need to decide your unique app name using '-' between each word. Then select which region you are working from and then click on the button "create app".
   - Once you have clicked on "create app" you will be taken to a new page. On this page you will see a row of tabs at the top left of the page. You first need to click on the "settings" tab and go to the settings page.
@@ -242,20 +243,20 @@ Milestones:
 
 ##### User Stories
 
-***Themes***
+**_Themes_**
 
 Themes were developed using the project goals as a starting point. These included:
 
-  - User management - This was necessary so that user could have all the necessary functions across the site.
+- User management - This was necessary so that user could have all the necessary functions across the site.
 
-  - Admin management - This was necessary so that the admin to have full function of admin data and images on site.
+- Admin management - This was necessary so that the admin to have full function of admin data and images on site.
 
-***Epics***
+**_Epics_**
 
 Themes were then refined into the following epics:
 
 - User management:
-  
+
   - Easily navigate across site.
 
   - Able to contact Sam Scarisbrick.
@@ -268,37 +269,37 @@ Themes were then refined into the following epics:
 
   - Add Projects.
 
-  ***User Stories***
+  **_User Stories_**
 
 The following user stories were completed throughout the development:
 
 Homepage:
 
- - As a User I can view homepage so that I can see all about TC Carpentry and images.
+- As a User I can view homepage so that I can see all about TC Carpentry and images.
 
 Navbar:
 
- - As a User I can navigate the site using the Navbar so that easily navigate across the site.
+- As a User I can navigate the site using the Navbar so that easily navigate across the site.
 
 Footer:
 
- - As a User I can see the footer and able to click on the links so that I can see information about Sam Scarisbrick and follow them on other platforms.
+- As a User I can see the footer and able to click on the links so that I can see information about Sam Scarisbrick and follow them on other platforms.
 
 About Page:
 
- - As a User I can access the about page so that I can read all about Sam Scarisbrick.
+- As a User I can access the about page so that I can read all about Sam Scarisbrick.
 
 Portfolio Page:
 
- - As a User I can access the portfolio page so that I can see all the different projects Sam Scarisbrick has worked on.
+- As a User I can access the portfolio page so that I can see all the different projects Sam Scarisbrick has worked on.
 
 Portfolio Detail Page:
 
- - As a User I can access the portfolio detail page so that I can view each project individually in more detail.
+- As a User I can access the portfolio detail page so that I can view each project individually in more detail.
 
 Contact Page:
 
- - As a User I can access the contact page so that I can see the different options on how to contact Sam Scarisbrick if I wish to do so.
+- As a User I can access the contact page so that I can see the different options on how to contact Sam Scarisbrick if I wish to do so.
 
 Contact Form:
 
@@ -310,11 +311,11 @@ Admin Add Technologies:
 
 Admin Add Projects:
 
- - As Admin I can add new projects so that users can see my old and any new projects I have worked on.
+- As Admin I can add new projects so that users can see my old and any new projects I have worked on.
 
 Admin Sign In:
 
- - As a Admin I can sign in to the admin page so that I can see the admin data.
+- As a Admin I can sign in to the admin page so that I can see the admin data.
 
 [back to top](#sam-scarisbrick-portfolio)
 
@@ -322,43 +323,43 @@ Admin Sign In:
 
 Wireframes were used to create a prototype of the project which may change during its development.
 
-***Desktop Homepage***
+**_Desktop Homepage_**
 
 ![Desktop Homepage Wireframe](/docs/readme_screenshots/desktop-homepage-wireframe.png)
 
-***Desktop About Page***
+**_Desktop About Page_**
 
 ![Desktop About Page Wireframe](/docs/readme_screenshots/desktop-about-page-wireframe.png)
 
-***Desktop Portfolio Page***
+**_Desktop Portfolio Page_**
 
 ![Desktop Portfolio Page Wireframe](/docs/readme_screenshots/desktop-portfolio-page-wireframe.png)
 
-***Desktop Portfolio Detail Page***
+**_Desktop Portfolio Detail Page_**
 
 ![Desktop Portfolio Detail Page Wireframe](/docs/readme_screenshots/desktop-portfolio-detail-page-wireframe.png)
 
-***Desktop Contact Page***
+**_Desktop Contact Page_**
 
 ![Desktop Contact Page Wireframe](/docs/readme_screenshots/desktop-contact-page-wireframe.png)
 
-***Mobile Homepage***
+**_Mobile Homepage_**
 
 ![Mobile Homepage Wireframe](/docs/readme_screenshots/mobile-homepage-wireframe.png)
 
-***Mobile About Page***
+**_Mobile About Page_**
 
 ![Mobile About Page Wireframe](/docs/readme_screenshots/mobile-about-page-wireframe.png)
 
-***Mobile Portfolio Page***
+**_Mobile Portfolio Page_**
 
 ![Mobile Portfolio Page Wireframe](/docs/readme_screenshots/mobile-portfolio-page-wireframe.png)
 
-***Mobile Portfolio Detail Page***
+**_Mobile Portfolio Detail Page_**
 
 ![Mobile Portfolio Detail Page Wireframe](/docs/readme_screenshots/mobile-portfolio-detail-page-wireframe.png)
 
-***Mobile Contact Page***
+**_Mobile Contact Page_**
 
 ![Mobile Contact Page Wireframe](/docs/readme_screenshots/mobile-contact-page-wireframe.png)
 
@@ -388,11 +389,145 @@ Admin is also protected my username and password from Django's built in admin us
 
 ##### Features
 
+**_Navbar_**
+
+As a User I would like to view the site on all my different devices so I can view site wherever I am.
+
+As a user I want to see a clear way of navigating around the site so that I can easily find the relative information I am looking for.
+
+The Navbar contains links for Home, About, Portfolio and Contact. These options are available to all to see.
+
+The navigation menu is displayed on all pages and forms into a hamburger menu on smaller devices. This allows users to view the site from any device and not take up too much space on mobile devices. It's very clear and easy to use.
+
+There is also a hover over effect to inform the user when they are hovering over the specific link and the Navlink for the page the user is currently on will also have a white underline to inform the user which page they are on.
+
+Desktop:
+
+![Desktop Navbar Screenshot](/docs/readme_screenshots/desktop-navbar.png)
+
+Mobile:
+
+![Mobile Navbar Screenshot](/docs/readme_screenshots/mobile-navbar.png)
+
+**_Footer_**
+
+The footer is at the bottom of every page. This gives information about Sam Scarisbrick and ways to contact. It also provides links to Facebook, LinkedIn, to email Sam Scarisbrick and links to the sites other pages.
+
+Desktop:
+
+![Desktop Footer Screenshot](/docs/readme_screenshots/desktop-footer.png)
+
+Mobile:
+
+![Mobile Footer Screenshot](/docs/readme_screenshots/mobile-footer.png)
+
+**_Homepage_**
+
+The homepage welcomes the user to the site with a picture of Sam Scarisbrick and information about him. There is also a button to link them to portfolio page and icons linking them to GitHub, LinkedIn and to email Sam.
+
+Desktop:
+
+![Desktop Homepage Screenshot 1](/docs/readme_screenshots/desktop-homepage-1.png)
+
+![Desktop Homepage Screenshot 2](/docs/readme_screenshots/desktop-homepage-2.png)
+
+Mobile:
+
+![Mobile Homepage Screenshot 1](/docs/readme_screenshots/mobile-homepage-1.png)
+
+![Mobile Homepage Screenshot 2](/docs/readme_screenshots/mobile-homepage-2.png)
+
+**_About Page_**
+
+The About Us page is where the user can read all Sam Scarisbrick in depth and find out information like experience, qualifications, skills and ambitions. This gives the user chance to understand about Sam.
+
+Desktop:
+
+![Desktop About Page Screenshot 1](/docs/readme_screenshots/desktop-about-page-1.png)
+
+![Desktop About Page Screenshot 2](/docs/readme_screenshots/desktop-about-page-2.png)
+
+Mobile:
+
+![Mobile About Page Screenshot 1](/docs/readme_screenshots/mobile-about-page-1.png)
+
+![Mobile About Page Screenshot 2](/docs/readme_screenshots/mobile-about-page-2.png)
+
+**_Portfolio Page_**
+
+The Portfolio page is a chance for the user to see all the different projects Sam Scarisbrick has worked along and what skills he has used.
+
+Desktop:
+
+![Desktop Portfolio Page Screenshot 1](/docs/readme_screenshots/desktop-portfolio-page-1.png)
+
+![Desktop Portfolio Page Screenshot 2](/docs/readme_screenshots/desktop-portfolio-page-2.png)
+
+![Desktop Portfolio Page Screenshot 2](/docs/readme_screenshots/desktop-portfolio-page-3.png)
+
+Mobile:
+
+![Mobile Portfolio Page Screenshot 1](/docs/readme_screenshots/mobile-portfolio-page-1.png)
+
+![Mobile Portfolio Page Screenshot 2](/docs/readme_screenshots/mobile-portfolio-page-2.png)
+
+![Mobile Portfolio Page Screenshot 2](/docs/readme_screenshots/mobile-portfolio-page-3.png)
+
+**_Portfolio Detail Page_**
+
+The Portfolio Detail Page is a chnace for the user to view a certain project in more detail, here they can read a more detailed overview of the project and see what skills were used.
+
+Desktop:
+
+![Desktop Portfolio Detail Page Screenshot 1](/docs/readme_screenshots/desktop-portfolio-detail-page-1.png)
+
+![Desktop Portfolio Detail Page Screenshot 2](/docs/readme_screenshots/desktop-portfolio-detail-page-2.png)
+
+Mobile:
+
+![Mobile Portfolio Detail Page Screenshot 1](/docs/readme_screenshots/mobile-portfolio-detail-page-1.png)
+
+![Mobile Portfolio Detail Page Screenshot 2](/docs/readme_screenshots/mobile-portfolio-detail-page-2.png)
+
+**_Contact Page_**
+
+The Contact Us page is where the user can find out all the different ways in which they can contact Sam Scarisbrick.
+
+Desktop:
+
+![Desktop Contact Page Screenshot 1](/docs/readme_screenshots/desktop-contact-page-1.png)
+
+![Desktop Contact Page Screenshot 2](/docs/readme_screenshots/desktop-contact-page-2.png)
+
+Mobile:
+
+![Mobile Contact Page Screenshot 1](/docs/readme_screenshots/mobile-contact-page-1.png)
+
+![Mobile Contact Page Screenshot 2](/docs/readme_screenshots/mobile-contact-page-2.png)
+
+**_Contact Form Errors_**
+
+The contact form is displayed on the contact page and gives the user a direct access to contacting Sam Scarisbrick. When the form is filled out incorrectly there is error message for each input field to help the user fill this out correctly.
+
+![Contact Form Errors Screenshot](/docs/readme_screenshots/contact-form-errors.png)
+
+**_Error Alert Messages_**
+
+When the user fills out the contact form and tries to submit, the user will see a alert message at the top of the screen either informing them it was a success or whether to check the form for errors.
+
+Success:
+
+![Contact Form Success Screenshot](/docs/readme_screenshots/error-alert-success.png)
+
+Error Fail:
+
+![Contact Form Error Screenshot](/docs/readme_screenshots/error-alert-message.png)
+
 #### The Surface Plane
 
 ##### Design
 
-***Colour Scheme***
+**_Colour Scheme_**
 
 I opted for a very few choices of colours throughout the site. The same colours have been implemented across the site and are included in the button's styles.
 
@@ -402,7 +537,7 @@ The colour palette was created using the coolors website.
 
 ![Coolors Screenshot](/docs/readme_screenshots/coolors.png)
 
-***Imagery***
+**_Imagery_**
 
 Font awesome was used to for the sites icons.
 
