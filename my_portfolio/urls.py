@@ -16,15 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import root_route
 from .views import get_csrf_token
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
     path('get-csrf-token/', get_csrf_token),
-    path('', root_route),
+    path('', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/projects/', include('projects.urls')),
     path('api/technologies/', include('technologies.urls')),
     path('api/send-email/', include('emailapp.urls')),
 ]
+
+handler404 = TemplateView.as_view(template_name='index.html')
