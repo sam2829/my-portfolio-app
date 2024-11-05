@@ -51,6 +51,7 @@ responsive link goes here ksjbaskjdf
       - [Font Awesome](#fontawesome)
       - [Google Fonts](#google-fonts)
       - [Prettier](#prettier)
+      - [Framer Motion](#framer-motion)
     - [Testing Frontend](#testing-frontend)
   - [Credits](#credits)
 
@@ -481,8 +482,6 @@ Desktop:
 
 ![Desktop Portfolio Detail Page Screenshot 1](/docs/readme_screenshots/desktop-portfolio-detail-page-1.png)
 
-![Desktop Portfolio Detail Page Screenshot 2](/docs/readme_screenshots/desktop-portfolio-detail-page-2.png)
-
 Mobile:
 
 ![Mobile Portfolio Detail Page Screenshot 1](/docs/readme_screenshots/mobile-portfolio-detail-page-1.png)
@@ -546,3 +545,147 @@ Google fonts was used for the font style.
 [back to top](#sam-scarisbrick-portfolio)
 
 ### Use of Components
+
+A number of reusable React components were created with the intention of reducing code duplication.
+
+**_AlertMessage.js_**
+
+Used to show alert messages to inform user of different actions. This was passed as a prop so each alert when called can display it's own message.
+
+**_CustomButton_**
+
+Used to create a custom button which was passed a text prop, to provide the text for the button.
+
+**_Dropdown Button_**
+
+This component was created so the user could filter the projects by a particular skill type.
+
+**_Error Message_**
+
+This component was created to display error messages on the contact form. This component can be used for each input field which avoids code repitition.
+
+**_Footer_**
+
+Used to display the footer on all pages.
+
+**_Icons_**
+
+This is used to display the social media icons on different pages and in the footer. They are also styled differently if the footer prop is passed to the component.
+
+**_LoadingSpinner_**
+
+Used to display loading spinner for whenever site is loading. Spinner can be different sizes depending on purpose, which is passed as a prop.
+
+**_NavBar_**
+
+Used to display navbar on all pages.
+
+**_NavBarNavLink_**
+
+Used to create numerous nav links for the navbar, which diferent information was passed as props.
+
+**_ScrollToTop_**
+
+Used to make sure each page renders at the top of the page.
+
+**_Skills_**
+
+Used to map over the list of different skills, depending on what skills they are for, whether they are for frontend, backend or tools.
+
+[back to top](#sam-scarisbrick-portfolio)
+
+### Custom Hooks
+
+**_useClickOutsideToggle.js_**
+
+This custom hook is used so that in mobile devices, if the navbar dropdown menu has been toggled open, the user can click anywhere outside the dropdown menu and this will still toggle the dropdown menu closed.
+
+**_useCsrfToken_**
+
+This custom hook is used to fetch the csrf tokens from the backend.
+
+**_useFetchPortfolioProjects_**
+
+This custom hook is used to fetch the portfolio projects and also fetch individual rojects for portfolio detail page.
+
+**_useFetchTechnologies_**
+
+This custom hook is used to fetch the list of technologies Sam has used.
+
+**_useIsSmallScreen_**
+
+This custom hook is used to check if the app is being used on a small screen.
+
+### Languages Used
+
+- HTML5
+
+- JSX
+
+- CSS
+
+- JavaScript
+
+[back to top](#sam-scarisbrick-portfolio)
+
+### Frameworks, Libraries and Dependencies
+
+#### React
+
+React is the frontend framework used to create the frontend of this project.
+
+#### React-Router-Dom
+
+React-Router-Dom is used to enable client side routing for React web applications and is used to implement basic routing across this project.
+
+#### ReactDOM
+
+ReactDOM is used for rendering components to the DOM. It bridges the gap between Reacts Virtual DOM and the actual DOM in the browser.
+
+#### Axios
+
+Axios was used to simplify requests made to the REST API.
+
+#### React Bootstrap
+
+React Bootstrap was used to help with the styling and layout of the entire project.
+
+#### Font Awesome
+
+Font awesome was used for the icons used across the site.
+
+#### Google fonts
+
+Google fonts was used to provide the font for the site.
+
+#### Prettier
+
+Prettier is used as code formatting tool which helped me structure my code in the correct way.
+
+#### Framer Motion
+
+Framer Motion was used to add animation to the app.
+
+[back to top](#sam-scarisbrick-portfolio)
+
+### Testing Frontend
+
+I have included details of my testing during and post development in a separate file called [TESTING_FRONTEND.md](TESTING_FRONTEND.md)
+
+### Credits
+
+- Code Institute - Without the knowledge gained through out doing the course I would not have been able to build this project.
+
+- React Framework - React Framework - For being able to use React Framework to build my project and all the documentation to help build and set up correctly.
+
+- Cloudinary - For storing the data for my posts.
+
+- StackOverflow - For helping give me with ideas on how to overcome issues I encountered.
+
+- Google Fonts - For supplying the fonts used.
+
+- Font Awesome - For Providing the icons used throughout this project.
+
+- Framer Motion - For providing the ability to add animation to the app.
+
+[back to top](#sam-scarisbrick-portfolio)
