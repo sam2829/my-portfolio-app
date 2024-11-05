@@ -36,7 +36,11 @@ const PortfolioDetailPage = () => {
     <Container>
       <main className={styles.Main}>
         {/* Loading spinner for when loading */}
-        {isLoading && <LoadingSpinner />}
+        {isLoading && (
+          <div className={styles.LoadingSpinnerContainer}>
+            <LoadingSpinner />
+          </div>
+        )}
         {/* Error message when fetching data fails */}
         {error && <ErrorMessage error={error} />}
         {!isLoading && !error && projectsData && (

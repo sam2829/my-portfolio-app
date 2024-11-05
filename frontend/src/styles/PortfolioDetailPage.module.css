@@ -4,6 +4,10 @@
     padding-bottom: 60px;
     min-height: 80vh;
 }
+
+.LoadingSpinnerContainer {
+    padding-top: 100px;
+}
   
 .Heading {
     font-size: 30px;

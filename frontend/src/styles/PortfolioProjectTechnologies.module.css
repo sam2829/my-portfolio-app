@@ -6,7 +6,8 @@
 
   .TechUsedList {
     font-weight: 700;
-    /* padding-left: 0; */
+    padding-left: 5%;
+    padding-right: 5%;
   }
   
   .TechUsedItems {
