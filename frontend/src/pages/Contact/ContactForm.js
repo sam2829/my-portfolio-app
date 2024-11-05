@@ -48,7 +48,10 @@ const ContactForm = ({ showAlert }) => {
     setIsSubmitting(true);
 
     try {
-      await axios.post("http://127.0.0.1:8000/api/send-email/", formEmailData);
+      await axios.post(
+        "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com/api/send-email/",
+        formEmailData
+      );
 
       // success alert message
       showAlert("success", `Your email was successfully sent!`);
