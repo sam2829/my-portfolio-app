@@ -85,12 +85,12 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
-    # os.environ.get('CLIENT_ORIGIN'),
+    os.environ.get('CLIENT_ORIGIN'),
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    # os.environ.get('CLIENT_ORIGIN'),
+    os.environ.get('CLIENT_ORIGIN'),
 ]
 
 CORS_ALLOW_CREDENTIALS = True
