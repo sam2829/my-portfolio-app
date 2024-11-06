@@ -88,9 +88,9 @@ CSRF_TRUSTED_ORIGINS = [
     os.environ.get('CLIENT_ORIGIN'),
     "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com",
     "http://www.samscarisbrick.co.uk",
-    # "https://www.samscarisbrick.co.uk",
+    "https://www.samscarisbrick.co.uk",
     "http://samscarisbrick.co.uk",
-    # "https://samscarisbrick.co.uk",
+    "https://samscarisbrick.co.uk",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -98,9 +98,9 @@ CORS_ALLOWED_ORIGINS = [
     os.environ.get('CLIENT_ORIGIN'),
     "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com",
     "http://www.samscarisbrick.co.uk",
-    # "https://www.samscarisbrick.co.uk",
+    "https://www.samscarisbrick.co.uk",
     "http://samscarisbrick.co.uk",
-    # "https://samscarisbrick.co.uk",
+    "https://samscarisbrick.co.uk",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
