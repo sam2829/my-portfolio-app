@@ -49,7 +49,7 @@ const ContactForm = ({ showAlert }) => {
 
     try {
       await axios.post(
-        "https://samscarisbrick.co.uk/api/send-email/",
+        "http://samscarisbrick.co.uk/api/send-email/",
         formEmailData
       );
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://samscarisbrick.co.uk',
+    baseURL: 'http://samscarisbrick.co.uk',
     withCredentials: true,
 });
 
