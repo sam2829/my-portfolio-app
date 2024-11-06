@@ -97,10 +97,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     os.environ.get('CLIENT_ORIGIN'),
     "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com",
-    "http://www.samscarisbrick.co.uk",
     "https://www.samscarisbrick.co.uk",
-    "http://samscarisbrick.co.uk",
+    "http://www.samscarisbrick.co.uk",
     "https://samscarisbrick.co.uk",
+    "http://samscarisbrick.co.uk",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
