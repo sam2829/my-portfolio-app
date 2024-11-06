@@ -19,7 +19,7 @@ const useFetchTechnologies = () => {
       setIsLoading(true);
       try {
         const { data } = await axios.get(
-          "http://samscarisbrick.co.uk/api/technologies/"
+          "https://samscarisbrick.co.uk/api/technologies/"
         );
         // console.log("API response data:", data);
 
