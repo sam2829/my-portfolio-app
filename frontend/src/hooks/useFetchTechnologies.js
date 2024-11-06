@@ -19,7 +19,7 @@ const useFetchTechnologies = () => {
       setIsLoading(true);
       try {
         const { data } = await axios.get(
-          "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com/api/technologies/"
+          "http://samscarisbrick.co.uk/api/technologies/"
         );
         // console.log("API response data:", data);
 
