@@ -49,7 +49,7 @@ const ContactForm = ({ showAlert }) => {
 
     try {
       await axios.post(
-        "http://samscarisbrick.co.uk/api/send-email/",
+        "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com/api/send-email/",
         formEmailData
       );
 
