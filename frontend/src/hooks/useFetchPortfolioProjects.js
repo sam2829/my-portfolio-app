@@ -16,8 +16,8 @@ const useFetchPortfolioProjects = (id) => {
       try {
         // If an id is provided, fetch the specific project; otherwise, fetch all projects
         const endpoint = id
-          ? `https://sam-scarisbrick-13b7fd9648a6.herokuapp.com/api/projects/${id}/`
-          : "https://sam-scarisbrick-13b7fd9648a6.herokuapp.com/api/projects/";
+          ? `https://www.samscarisbrick.co.uk/api/projects/${id}/`
+          : "https://www.samscarisbrick.co.uk/api/projects/";
 
         const { data } = await axios.get(endpoint);
         // console.log("API response data:", data);
