@@ -4,7 +4,7 @@
 
 Welcome to my portfolio website! As an eager junior developer, I've designed this site to showcase the projects I've built throughout my journey in software development. Here, you can explore my work, learn about my skills, and see my passion for creating innovative solutions. Thank you for visiting!
 
-Here is a live version of the project dksjfbnsdjkfbndskf
+Here is a live version of the project [Sam Scarisbrick](https://www.samscarisbrick.co.uk/)
 
 ![Am I Responsive Screenshot](/docs/readme_screenshots/am-i-responsive.png)
 
